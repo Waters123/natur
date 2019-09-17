@@ -1,0 +1,87 @@
+.section-about {
+	background-color: #f9f9f9;
+	padding: 25rem 0;
+	margin-top: -20vh;
+	margin-bottom: -18vh;
+}
+
+.section-features {
+	padding: 20rem 0;
+	background-image: linear-gradient(to right bottom, #7ed56fc5, #28b485c5),
+		url(../img/nat-4.jpg);
+	background-size: cover;
+	transform: skewY(-7deg);
+	//sectionshi pirdapiri childi ..
+	& > * {
+		transform: skewY(7deg);
+
+		@include respond(tab-port) {
+			transform: none;
+		}
+	}
+
+	@include respond(tab-port) {
+		transform: none;
+		padding: 15rem 0;
+	}
+}
+
+.section-tours {
+	background-color: #f9f9f9;
+	padding: 25rem 0 10rem 0;
+	margin-top: -12vh;
+
+	@include respond(tab-port) {
+		padding: 5rem 0 10rem 0;
+	}
+}
+
+.section-stories {
+	padding: 15rem 0;
+	position: relative;
+	@include respond(tab-port) {
+		padding: 5rem 0;
+	}
+}
+
+.section-book {
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(126, 213, 111, 1),
+		rgba(40, 180, 133, 1)
+	);
+
+	padding: 15rem 0;
+}
+
+.book {
+	background-image: linear-gradient(
+			(
+				105deg,
+				rgba(255, 255, 255, 0.9) 0%,
+				rgba(255, 255, 255, 0.9) 50%,
+				transparent 50%
+			)
+		),
+		url(../img/nat-10.jpg);
+	background-size: 100%;
+	height: 50rem;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 1);
+	border-radius: 0.3rem;
+
+	@include respond(tab-port) {
+		background-image: linear-gradient(
+				(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%)
+			),
+			url(../img/nat-10.jpg);
+		background-size: cover;
+	}
+	&_form {
+		width: 50%;
+		padding: 6rem;
+		@include respond(tab-port) {
+			width: 100%;
+			padding: 3rem;
+		}
+	}
+}
